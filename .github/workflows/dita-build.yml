@@ -37,6 +37,6 @@ jobs:
           dita install fox.jason.extend.css
           dita install org.doctales.xmltask
           dita install fox.jason.prismjs
-        input: document.ditamap
-        transtype: html5
-        output-path: out
+         input: document.ditamap
+         transtype: html5
+         output-path: out
