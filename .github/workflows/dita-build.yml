@@ -41,7 +41,7 @@ jobs:
             org.doctales.xmltask
             fox.jason.extend.css
             fox.jason.prismjs
-          input: document.ditamap
+          input: flowers.ditamap
           transtype: pdf
           output-path: out
 
