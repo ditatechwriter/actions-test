@@ -1,0 +1,62 @@
+# This is a basic workflow to help you get started with Actions
+
+name: DITA-CI2
+
+# Controls when the action will run. 
+on:
+  # Triggers the workflow on push or pull request events but only for the main branch
+#   push:
+#     branches: [ main ]
+#   pull_request:
+#     branches: [ main ]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+jobs:
+  build-dita:
+    name: Build DITA
+    runs-on: ubuntu-latest
+    steps:
+      - name: Git checkout
+        uses: actions/checkout@v2
+      - name: Build PDF
+        uses: jason-fox/dita-build-action@master
+        with:
+          install: |
+            apt-get update -q
+            apt-get install -qy --no-install-recommends nodejs
+            nodejs -v
+          plugins: |
+            org.doctales.xmltask
+            fox.jason.extend.css
+            fox.jason.prismjs
+          input: flowers.ditamap
+          transtype: pdf
+          output-path: out
+      - name: Build HTML5 + Bootstrap
+        uses: jason-fox/dita-build-action@master
+        with:
+          install: |
+            apt-get update -q
+            apt-get install -qy --no-install-recommends nodejs
+            nodejs -v
+          plugins: |
+            net.infotexture.dita-bootstrap
+            org.doctales.xmltask
+            fox.jason.extend.css
+            fox.jason.prismjs
+          input: flowers.ditamap
+          transtype: html5-bootstrap
+          output-path: out
+      - name: Upload DITA
+        uses: actions/upload-artifact@v2
+        with:
+          name: dita-artifact
+          path: 'out'
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@3.7.1
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BRANCH: gh-pages # The branch the action should deploy to.
+          FOLDER: out # The folder the action should deploy.
