@@ -30,10 +30,18 @@ jobs:
         run: node --version
       
       # DITA build
-      - name: Build HTML5 using DITA-OT
+      - name: Build PDF
         uses: jason-fox/dita-build-action@master
         with:
-         input: flowers.ditamap
-         transtype: pdf2
-         output-path: out
+          install: |
+            apt-get update -q
+            apt-get install -qy --no-install-recommends nodejs
+            nodejs -v
+          plugins: |
+            org.doctales.xmltask
+            fox.jason.extend.css
+            fox.jason.prismjs
+          input: document.ditamap
+          transtype: pdf
+          output-path: out
 
