@@ -33,6 +33,10 @@ jobs:
       - name: Build HTML5 using DITA-OT
         uses: jason-fox/dita-build-action@master
         with:
-        input: flowers.ditamap
+         install : |
+          dita install fox.jason.extend.css
+          dita install org.doctales.xmltask
+          dita install fox.jason.prismjs
+        input: document.ditamap
         transtype: html5
         output-path: out
