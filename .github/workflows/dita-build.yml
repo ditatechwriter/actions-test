@@ -34,6 +34,6 @@ jobs:
         uses: jason-fox/dita-build-action@master
         with:
          input: flowers.ditamap
-         transtype: pdf
+         transtype: pdf2
          output-path: out
 
