@@ -20,20 +20,6 @@ jobs:
     steps:
       - name: Git checkout
         uses: actions/checkout@v2
-      - name: Build PDF
-        uses: jason-fox/dita-build-action@master
-        with:
-          install: |
-            apt-get update -q
-            apt-get install -qy --no-install-recommends nodejs
-            nodejs -v
-          plugins: |
-            org.doctales.xmltask
-            fox.jason.extend.css
-            fox.jason.prismjs
-          input: flowers.ditamap
-          transtype: pdf
-          output-path: out
       - name: Build HTML5 + Bootstrap
         uses: jason-fox/dita-build-action@master
         with:
