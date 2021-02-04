@@ -28,4 +28,12 @@ jobs:
       # Runs a single command using the runners shell
       - name: Run a one-line script
         run: node --version
+      
+      # DITA build
+      - name: Build HTML5 using DITA-OT
+        uses: jason-fox/dita-build-action@master
+        with:
+         input: flowers.ditamap
+         transtype: pdf
+         output-path: out
 
