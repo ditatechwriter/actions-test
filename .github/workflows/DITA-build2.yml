@@ -27,7 +27,8 @@ jobs:
             apt-get update -q
             apt-get install -qy --no-install-recommends nodejs
             nodejs -v
-            dita install https://github.com/mmclhugo1/DITA-plugins/main/gh-actions-test.zip
+            apt-get install -y apt-utils
+            dita install https://github.com/mmclhugo1/DITA-plugins/blob/main/gh-actions-test.zip
           input: flowers.ditamap
           transtype: html5-bootstrap
           output-path: out
