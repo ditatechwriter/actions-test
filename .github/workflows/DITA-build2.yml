@@ -33,7 +33,7 @@ jobs:
           input: flowers.ditamap
           transtype: html5-bootstrap
           output-path: out
-          properties: --args.draft=yes --verbose
+          properties: --propertyfile=actions-test.properies
       - name: Upload DITA
         id: upload
         uses: actions/upload-artifact@v2
