@@ -6,7 +6,7 @@ name: 1.1-build
 on:
   # Triggers the workflow on push or pull request events but only for the main branch
   push:
-    branches: [ '1.1' ]
+    branches: [ 1-1 ]
   # pull_request:
   #   branches: [ 1.1 ]
 
@@ -42,7 +42,7 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@3.7.1
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          BRANCH: 1.1-out # The branch the action should deploy to.
+          BRANCH: 1-1-out # The branch the action should deploy to.
           FOLDER: out # The folder the action should deploy.
       
       - uses: act10ns/slack@v1
