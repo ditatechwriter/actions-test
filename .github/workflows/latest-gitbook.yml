@@ -24,11 +24,6 @@ jobs:
         id: DITA-build
         uses: jason-fox/dita-build-action@master
         with:
-          install: |
-            apt-get update -q
-            apt-get install -qy --no-install-recommends nodejs
-            nodejs -v
-            apt-get install -y apt-utils
           build: dita -i flowers.ditamap -o out -f markdown_gitbook -v --propertyfile=actions-test.properties
       - name: Upload DITA
         id: upload
@@ -43,6 +38,13 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           BRANCH: latest-gitbook # The branch the action should deploy to.
           FOLDER: out # The folder the action should deploy.
+          run: |
+            git mv SUMMARY.md _sidebar.md
+            git commit -m "renamed SUMMARY.md"
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
       
       - uses: act10ns/slack@v1
         with:
