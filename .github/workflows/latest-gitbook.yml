@@ -51,6 +51,22 @@ jobs:
         if: always()
         env:
             SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+ 
+ rename-summary:
+   runs-on: ubuntu-latest
+   name: rename Summary
+   needs: build-dita
+   steps:
+     - name: Git checkout2
+       uses: actions/checkout@v2
+       with:
+         ref: latest-gitbook
+     - name: rename file
+       run: |
+         git mv SUMMARY.md _sidebar.md
+         git commit -m "renamed file"
+         git push
+  
             
        
     
