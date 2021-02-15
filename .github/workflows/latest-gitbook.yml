@@ -53,9 +53,12 @@ jobs:
    name: rename Summary
    needs: build-dita
    steps:
+     - name: Check out latest-gitbook branch
+       uses: actions/checkout@v2
+       with:
+          ref: 'latest-gitbook'
      - name: rename file
        run: |
-         git checkout latest-gitbook
          git mv SUMMARY.md _sidebar.md
          git commit -m "renamed file"
          git push
