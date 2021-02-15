@@ -51,7 +51,7 @@ jobs:
           ref: 'latest-gitbook'
      - name: rename file
        run: |
-         git mv SUMMARY.md _sidebar.md
+         git docs/mv SUMMARY.md docs/_sidebar.md
          git config --global user.email "mmclhugo1@gmail.com"
          git config --global user.name "mmclhugo1"
          git commit -m "renamed file"
