@@ -38,11 +38,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           BRANCH: latest-gitbook # The branch the action should deploy to.
           FOLDER: out # The folder the action should deploy.
-      - name: rename Summary
-        id: renameSummary
-        uses: actions/checkout@v2
-        with:
-         build: git mv Summary.md _sidebar.md
+          build: git mv Summary.md _sidebar.md
       
       - uses: act10ns/slack@v1
         with:
