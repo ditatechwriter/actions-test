@@ -38,6 +38,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           BRANCH: latest-gitbook # The branch the action should deploy to.
           FOLDER: out # The folder the action should deploy.
+          TARGET-FOLDER: docs
  
  rename-summary:
    runs-on: ubuntu-latest
