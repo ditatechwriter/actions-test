@@ -14,8 +14,8 @@ on:
   workflow_dispatch:
 
 jobs:
-  build-dita:
-    name: Build DITA
+ build-dita:
+    name: Build-DITA
     runs-on: ubuntu-latest
     steps:
       - name: Git checkout
@@ -38,14 +38,6 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           BRANCH: latest-gitbook # The branch the action should deploy to.
           FOLDER: out # The folder the action should deploy.
-          run: |
-            git checkout latest-gitbook
-            git mv SUMMARY.md _sidebar.md
-            git commit -m "renamed SUMMARY.md"
-      - name: Push changes
-        uses: ad-m/github-push-action@master
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
       
       - uses: act10ns/slack@v1
         with:
@@ -55,3 +47,22 @@ jobs:
         if: always()
         env:
             SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+            
+ rename summary:
+       needs: build-dita
+       name: rename-summary
+       runs-on: ubuntu-latest
+       steps:
+         - name: Git checkout
+           uses: actions/checkout@v2
+           with:
+             ref: latest-gitbook
+         - name: rename file
+           run: |
+             git mv SUMMARY.md _sidebar.md
+             git commit -m "renamed summary.md" -a | exit 0
+             git push
+       
+    
+            
+    
