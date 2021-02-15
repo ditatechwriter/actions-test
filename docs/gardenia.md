@@ -4,7 +4,7 @@
 
 **Gardenia** is a [genus](glossaryGenus.md) of about 250 species of flowering plants in the coffee family, **Rubiaceae**, native to the tropical and subtropical regions of Africa, southern Asia, Australasia and Oceania. Several species occur on Hawaii, where gardenias are known as *na'u* or *nanu*.
 
-![](../../images/Gardeniaflower.jpg)
+![](images/Gardeniaflower.jpg)
 
 The genus was named by Carl Linnaeus after Dr. Alexander Garden \(1730-1791\), a Scottish-born American naturalist.
 

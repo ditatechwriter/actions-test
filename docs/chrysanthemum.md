@@ -4,7 +4,7 @@
 
 **Chrysanthemums**, often called 'mums', are a [genus](glossaryGenus.md) \(**Chrysanthemum**\) of about 30 species of [perennial](glossaryPerennial.md) flowering plants in the family Asteraceae, native to Asia and northeastern Europe.
 
-![](../../images/Chrysanthemums.jpg)
+![](images/Chrysanthemums.jpg)
 
 The genus once included many more species, but was split several decades ago into several genera; the naming of the genera has been contentious, but a ruling of the International Code of Botanical Nomenclature in 1999 resulted in the defining species of the genus being changed to **Chrysanthemum indicum**, thereby restoring the economically important florist's chrysanthemum to the genus **Chrysanthemum**. These species were, after the splitting of the genus but before the ICBN ruling, commonly treated under the genus name **Dendranthema**.
 

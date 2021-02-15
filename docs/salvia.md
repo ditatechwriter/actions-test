@@ -4,7 +4,7 @@
 
 **Salvia** is the largest [genus](glossaryGenus.md) of plants in the mint family, **Lamiaceae**, with approximately 900 species of shrubs, herbaceous perennials, and annuals. It is one of three genera commonly referred to as sage. When used without modifiers, sage generally refers to **Salvia officinalis** \("common sage"\); however, it can be used with modifiers to refer to any member of the genus. The ornamental species are commonly referred to by their scientific name **Salvia**. The genus is distributed throughout the world, with the center of diversity and origin appearing to be Central and South Western Asia, while nearly 500 species are native to Mexico and Central and South America.
 
-![](../../images/Salvia.jpg)
+![](images/Salvia.jpg)
 
 The name is derived from the Latin *salvere* \("to save"\), referring to the long-believed healing properties of salvia. The Latin was corrupted to '*sauja*', to the French '*sauge*', and to the old English '*sawge*', and eventually became the modern day '*sage*'. Pliny the Elder was the first to use the Latin name salvia.
 

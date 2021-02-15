@@ -4,7 +4,7 @@
 
 **Gerbera** is a genus of ornamental plants from the sunflower family \(**Asteraceae**\). It was named in honor of the German naturalist Traugott Gerber.
 
-![](../../images/Gerbera.jpg)
+![](images/Gerbera.jpg)
 
 It has approximately 30 species in the wild, extending to South America, Africa and tropical Asia. The first scientific description of a **Gerbera** was made by J.D. Hooker in Curtis's Botanical Magazine in 1889 when he described **Gerbera jamesonii**, a South African species also known as **Transvaal daisy** or **Barberton Daisy**.
 

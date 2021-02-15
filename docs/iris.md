@@ -4,7 +4,7 @@
 
 **Iris** is a [genus](glossaryGenus.md) of between 200-300 species of flowering plants with showy flowers. It takes its name from the Greek word for a *rainbow*, referring to the wide variety of flower colors found among the many species. As well as being the scientific name, iris is also very widely used as a common name; for one thing, it refers to all **Iris** species, but some plants called thus belong to closely related genera. In North America, a common name for irises is **flags**, while the subgenus **Scorpiris** is widely known as **junos**, particularly in horticulture.
 
-![](../../images/Iris_sanguinea.jpg)
+![](images/Iris_sanguinea.jpg)
 
 The [genus](glossaryGenus.md) is widely distributed throughout the north temperate zone. Their habitats are considerably varied, ranging from cold and mountain regions to the grassy slopes, meadowlands and riverbanks of Europe, the Middle East and northern Africa, Asia and across North America.
 
