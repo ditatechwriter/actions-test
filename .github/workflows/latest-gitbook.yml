@@ -64,10 +64,10 @@ jobs:
          git config --global user.name "mmclhugo1"
          git commit -m "renamed file"
      - name: Push changes
-       if: github.ref == 'refs/heads/latest-gitbook'
        uses: ad-m/github-push-action@master
        with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
+        branch: latest-gitbook
   
             
        
