@@ -25,9 +25,6 @@ jobs:
         uses: jason-fox/dita-build-action@master
         with:
           build: dita -i flowers.ditamap -o out -f markdown_gitbook -v --propertyfile=actions-test.properties
-          install: |
-            cd out
-            mv SUMMARY.md _sidebar.mv
       - name: Upload DITA
         id: upload
         uses: actions/upload-artifact@v2
@@ -41,6 +38,8 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           BRANCH: latest-gitbook # The branch the action should deploy to.
           FOLDER: out # The folder the action should deploy.
+          install: |
+            mv SUMMARY.md _sidebar.mv
       
       - uses: act10ns/slack@v1
         with:
