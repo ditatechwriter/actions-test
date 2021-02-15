@@ -60,6 +60,8 @@ jobs:
      - name: rename file
        run: |
          git mv SUMMARY.md _sidebar.md
+         git config --global user.email "mmclhugo1@gmail.com"
+         git config --global user.name "mmclhugo1"
          git commit -m "renamed file"
      - name: Push changes
        if: github.ref == 'refs/heads/latest-gitbook'
