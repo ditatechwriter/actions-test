@@ -15,19 +15,19 @@
   </topicref>
   <topicref href="index.dita" collection-type="sequence">
     <topicref href="springFlowers.dita" collection-type="sequence">
-      <topicref href="iris.dita"/>
-      <topicref href="snowdrop.dita"/>
+      <topicref href="flowers/iris.dita"/>
+      <topicref href="flowers/snowdrop.dita"/>
     </topicref>
     <topicref href="summerFlowers.dita" collection-type="sequence">
-      <topicref href="gardenia.dita"/>
-      <topicref href="lilac.dita"/>
+      <topicref href="flowers/gardenia.dita"/>
+      <topicref href="flowers/lilac.dita"/>
     </topicref>
     <topicref href="autumnFlowers.dita" collection-type="sequence">
-      <topicref href="chrysanthemum.dita"/>
-      <topicref href="salvia.dita"/>
+      <topicref href="flowers/chrysanthemum.dita"/>
+      <topicref href="flowers/salvia.dita"/>
     </topicref>
     <topicref href="winterFlowers.dita" collection-type="sequence">
-      <topicref href="gerbera.dita"/>
+      <topicref href="flowers/gerbera.dita"/>
     </topicref>
   </topicref>
   <?oxy_comment_start author="Mary" timestamp="20120510T115308+0300" comment="We should review the list of glossary terms. I think there are many technical terms in the documentation that need to be addressed."?>
