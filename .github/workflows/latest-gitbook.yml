@@ -41,16 +41,7 @@ jobs:
       - name: Git checkout2
         uses: actions/checkout@v2
         with:
-             ref: latest-gitbook
-      - name: rename file
-         run:|
-             git mv SUMMARY.md _sidebar.md
-             git commit -m "renamed summary.md"
-      - name: Push changes
-        if: github.ref == 'refs/heads/latest-gitbook'
-        uses: ad-m/github-push-action@master
-        with:
-           github_token: ${{ secrets.GITHUB_TOKEN }}       
+             ref: latest-gitbook      
       
       - uses: act10ns/slack@v1
         with:
