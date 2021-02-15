@@ -38,28 +38,41 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           BRANCH: latest-gitbook # The branch the action should deploy to.
           FOLDER: out # The folder the action should deploy.
-      - name: Git checkout
-        uses: actions/checkout@v2
-        with:
-             ref: latest-gitbook
-      - name: rename file
-         run:|
-             git mv SUMMARY.md _sidebar.md
-             git commit -m "renamed summary.md"
-      - name: Push changes
-        if: github.ref == 'refs/heads/latest-gitbook'
-        uses: ad-m/github-push-action@master
-        with:
-           github_token: ${{ secrets.GITHUB_TOKEN }}       
-      
-      - uses: act10ns/slack@v1
-        with:
-          status: ${{ job.status }}
-          steps: ${{ toJson(steps) }}
-          channel: '#gh-actions'
-        if: always()
-        env:
-            SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+ 
+ rename-summary:
+   runs-on: ubuntu-latest
+   name: rename Summary
+   needs: build-dita
+   steps:
+     - name: Check out latest-gitbook branch
+       uses: actions/checkout@v2
+       with:
+          ref: 'latest-gitbook'
+     - name: rename file
+       run: |
+         git mv SUMMARY.md _sidebar.md
+         git config --global user.email "mmclhugo1@gmail.com"
+         git config --global user.name "mmclhugo1"
+         git commit -m "renamed file"
+     - name: Push changes
+       uses: ad-m/github-push-action@master
+       with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        branch: latest-gitbook
+ 
+ notify-slack:
+   runs-on: ubuntu-latest
+   name: Slack update
+   needs: rename-summary
+   steps:
+    - uses: act10ns/slack@v1
+      with:
+        status: ${{ job.status }}
+        steps: ${{ toJson(steps) }}
+        channel: '#gh-actions'
+      if: always()
+      env:
+        SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
             
        
     
