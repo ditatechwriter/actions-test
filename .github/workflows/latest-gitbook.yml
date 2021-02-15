@@ -38,10 +38,6 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           BRANCH: latest-gitbook # The branch the action should deploy to.
           FOLDER: out # The folder the action should deploy.
-      - name: Git checkout2
-        uses: actions/checkout@v2
-        with:
-             ref: latest-gitbook      
       
       - uses: act10ns/slack@v1
         with:
