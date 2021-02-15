@@ -45,7 +45,7 @@ jobs:
       - name: rename file
          run:|
              git mv SUMMARY.md _sidebar.md
-             git commit -m "renamed summary.md" -a | exit 0
+             git commit -m "renamed summary.md"
              git push
       
       - uses: act10ns/slack@v1
