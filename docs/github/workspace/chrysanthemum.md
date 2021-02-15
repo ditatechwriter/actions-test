@@ -2,7 +2,7 @@
 
 *From Wikipedia, the free encyclopedia.*
 
-**Chrysanthemums**, often called 'mums', are a [genus](../../concepts/glossaryGenus.md) \(**Chrysanthemum**\) of about 30 species of [perennial](../../concepts/glossaryPerennial.md) flowering plants in the family Asteraceae, native to Asia and northeastern Europe.
+**Chrysanthemums**, often called 'mums', are a [genus](glossaryGenus.md) \(**Chrysanthemum**\) of about 30 species of [perennial](glossaryPerennial.md) flowering plants in the family Asteraceae, native to Asia and northeastern Europe.
 
 ![](../../images/Chrysanthemums.jpg)
 

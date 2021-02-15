@@ -2,7 +2,7 @@
 
 *From Wikipedia, the free encyclopedia.*
 
-**Gardenia** is a [genus](../../concepts/glossaryGenus.md) of about 250 species of flowering plants in the coffee family, **Rubiaceae**, native to the tropical and subtropical regions of Africa, southern Asia, Australasia and Oceania. Several species occur on Hawaii, where gardenias are known as *na'u* or *nanu*.
+**Gardenia** is a [genus](glossaryGenus.md) of about 250 species of flowering plants in the coffee family, **Rubiaceae**, native to the tropical and subtropical regions of Africa, southern Asia, Australasia and Oceania. Several species occur on Hawaii, where gardenias are known as *na'u* or *nanu*.
 
 ![](../../images/Gardeniaflower.jpg)
 
