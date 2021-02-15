@@ -24,7 +24,7 @@ jobs:
         id: DITA-build
         uses: jason-fox/dita-build-action@master
         with:
-          build: dita -i docs/flowers.ditamap -o out -f markdown_gitbook -v --propertyfile=actions-test.properties
+          build: dita -i flowers.ditamap -o out -f markdown_gitbook -v --propertyfile=actions-test.properties
       - name: Upload DITA
         id: upload
         uses: actions/upload-artifact@v2
