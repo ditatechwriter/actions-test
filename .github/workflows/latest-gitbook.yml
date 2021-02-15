@@ -38,15 +38,6 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           BRANCH: latest-gitbook # The branch the action should deploy to.
           FOLDER: out # The folder the action should deploy.
-      
-      - uses: act10ns/slack@v1
-        with:
-          status: ${{ job.status }}
-          steps: ${{ toJson(steps) }}
-          channel: '#gh-actions'
-        if: always()
-        env:
-            SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
  
  rename-summary:
    runs-on: ubuntu-latest
@@ -68,7 +59,20 @@ jobs:
        with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         branch: latest-gitbook
-  
+ 
+ notify-slack:
+   runs-on: ubuntu-latest
+   name: Slack update
+   needs: rename-summary
+   steps:
+    - uses: act10ns/slack@v1
+      with:
+        status: ${{ job.status }}
+        steps: ${{ toJson(steps) }}
+        channel: '#gh-actions'
+      if: always()
+      env:
+        SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
             
        
     
