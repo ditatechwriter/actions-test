@@ -36,6 +36,9 @@ jobs:
         with:
           name: dita-artifact
           path: 'out'
+          install: |
+            cd out
+            mv SUMMARY.md _sidebar.md
       - name: Deploy 🚀
         id: deploy
         uses: JamesIves/github-pages-deploy-action@3.7.1
