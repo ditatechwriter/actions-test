@@ -39,6 +39,7 @@ jobs:
           BRANCH: latest-gitbook # The branch the action should deploy to.
           FOLDER: out # The folder the action should deploy.
           run: |
+            git checkout latest-gitbook
             git mv SUMMARY.md _sidebar.md
             git commit -m "renamed SUMMARY.md"
       - name: Push changes
