@@ -2,7 +2,7 @@
 
 With just a little bit of care and preparation, any flower garden can be a vibrantly colored environment.
 
-**Release 1.3**
+**Release 1.4**
 
 **Draft comment:**michael   
 BIG DRAFT COMMENT3
