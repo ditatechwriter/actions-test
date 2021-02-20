@@ -1,3 +1,0 @@
-# DOCSIFYJS
-
-Some text here
